@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600,700');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-size: inherit;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 62.5%;
+    position: relative;
+    height: 100vh;
+    background-color: #ddf1dc;
+    animation: fadeIn 200ms ease-in-out;
+    backface-visibility: hidden;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.box-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    border-radius: 20px;
+    width: 28rem;
+    box-shadow: 0 17px 90px rgba(11, 49, 38, 0.18);
+}
+
+.image-box{
+    position: relative;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(bg-image.jpg);
+    width: 100%;
+    height: 20rem;
+}
+
+.text-box{
+    left: 10%;
+    position: absolute;
+    bottom: 15%;
+}
+
+.artist{
+    color: rgb(67, 196, 110);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.2rem;
+    letter-spacing: .2rem;
+    text-shadow: 0px 3px 13px rgb(0, 0, 0);
+    animation: fadeIn 700ms ease-out;
+    backface-visibility: hidden;
+}
+
+.song{
+    width: 80%;
+    line-height: 3.5rem;
+    margin-top: 1.2rem;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 3rem;
+    letter-spacing: .1rem;
+    text-shadow: 0px 3px 13px rgb(0, 0, 0);
+    animation: fadeIn 600ms ease-out;
+    backface-visibility: hidden;
+}
+
+.like-image{
+    position: absolute;
+    height: 1.5rem;
+    bottom: 20%;
+    left: 90%;
+    opacity: 0.5;
+    animation: fadeInRotate 1s ease-out;
+}
+
+.controls{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 1rem 2rem;
+    background-color: #FFF;
+}
+
+.progress-bar{
+    position: relative;
+    height: .6rem;
+    background: linear-gradient(45deg, rgb(255, 255, 255), #8BC34A);
+}
+
+.progress-dot{
+    height: 1.4rem;
+    width: 1.4rem;
+    background-color: rgb(119, 190, 36);
+    border-radius: 100px;
+    position: absolute;
+    top: -.3rem;
+    left: 80%;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.21);
+    z-index: 1;
+    animation: fadeIn 900ms ease-in-out;
+    backface-visibility: hidden;
+}
+
+.control-box{
+    margin: 1rem 0;
+    text-align: center;
+    animation: fadeIn 500ms ease-in-out;
+    backface-visibility: hidden;
+}
+
+.image{
+    backface-visibility: hidden;
+    width: 5%;
+    margin-bottom: .8rem;
+    transition: all 300ms ease-in-out;
+}
+
+.image:nth-child(2){
+    margin: 0 20px;
+    width: 12%;
+    transition: all 300ms ease-in-out;
+    z-index: 1;
+}
+
+
+.image:nth-child(2):hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.image:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.credit,
+.credit:link,
+.credit:active{
+    text-decoration: none;
+    left: 50%;
+    top: 98%;
+    position: absolute;
+    color: rgba(0, 0, 0, 0.267);
+    text-align: center;
+    font-weight: 600;
+    transform: translate(-50%, -60%);
+    font-size: 1rem;
+}
+
+.timing-box{
+    background-color: #FFF;
+    position: relative;
+    width: 100%;
+    padding-top: .8rem;
+    backface-visibility: hidden;
+}
+
+.timing-box p:nth-child(2){
+    position: absolute;
+    left: 90%;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.timing-box p:nth-child(1){
+    position: absolute;
+    left: 5%;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.timing-box p{
+    color: rgb(182, 182, 182);
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+        transform: scale(0)
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInRotate {
+    0%{
+        opacity: 0;
+        transform: scale(0);
+        transform: rotate(180deg)
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+/* Media Query */
+
+@media only screen and (max-width:481px){
+    /* default iPad screens */
+    body{
+        font-size: 52.5%;
+    }
+ }
